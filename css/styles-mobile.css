@@ -261,7 +261,7 @@ a {
     height: 432px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url("../images/hero-bg.jpg");
+        url("../images/hero-bg-Mobile-1x-min.png");
 
     background-repeat: no-repeat;
     background-position: center;
@@ -271,6 +271,14 @@ a {
     align-items: center;
     justify-content: center;
     gap: 72px;
+}
+
+@media (max-width: 767px) and (min-resolution: 192dpi) {
+    .hero-section {
+        background-image: linear-gradient(rgba(46, 47, 66, 0.7),
+                rgba(46, 47, 66, 0.7)),
+            url('../images/hero-bg-Mobile-2x-min.png');
+    } 
 }
 
 .hero-title {
@@ -673,10 +681,7 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* text-align: center; */
     gap: 16px;
-    /* padding: 96px; */
-    /* max-width: 268px;  */
 }
 
 .footer-socials-text {
@@ -685,12 +690,10 @@ a {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #ffffff;
-    /* margin-bottom: 16px; */
 }
 
 
 .subscribe-title {
-    /* margin-bottom: 16px; */
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -702,7 +705,6 @@ a {
 .subscribe-form {
     display: flex;
     flex-direction: column;
-    /* gap: 24px; */
     gap: 16px;
     width: 100%;
     margin-bottom: 96px
@@ -818,8 +820,8 @@ a {
     height: 623px;
     background-color: #fff;
     max-height: 90vh;
-    /* ✅ висота до 90% екрана */
     overflow-y: auto;
+    padding: 0 16px;
 }
 
 .modal-overlay.is-open .modal-window {
