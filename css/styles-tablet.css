@@ -3,9 +3,15 @@
         max-width: 768px;
     }
 
-    .icon-box,
-    .menu-toggle,
-    .nav-list,
+    .mobile-menu {
+        display: none !important;
+    
+   }
+    
+    .menu-toggle {
+        display: none !important;
+    }
+    
     .contacts,
     .menu-icon {
     display: none;
@@ -13,11 +19,11 @@
 }
 
 .container {
-    max-width: 768px;
-    padding-left: 16px;
+    /* max-width: 768px; */
+    /* padding-left: 16px;
     padding-right: 16px;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; */
 }
 
 ul {
@@ -55,12 +61,10 @@ a {
 .page-header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
-    width: 100%;
-    height: 72px;
 }
 
 .header-container {
-    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
@@ -82,6 +86,11 @@ a {
 
 .header-logo .logo-part {
     color: #2e2f42;
+    /* margin-right: 120px; */
+}
+
+.header-logo {
+    padding: 24px 0;
     margin-right: 120px;
 }
 
@@ -175,9 +184,7 @@ a {
     display: none;
 }
 
-.mobile-menu.is-hidden.is-open {
-    display: flex;
-}
+
 
 /* Відкрите мобільне меню */
 .mobile-menu {
@@ -293,7 +300,7 @@ a {
     height: 436px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
-        url("../images/hero-bg-Tablet-1x-min.png");
+        url("../images/hero-bg-Tablet-1x-min.jpg");
 
     background-repeat: no-repeat;
     background-position: center;
@@ -308,7 +315,7 @@ a {
     .hero-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url('../images/hero-bg-Tablet-2x-min.png');
+            url('../images/hero-bg-Tablet-2x-min.jpg');
     } 
 }
 

@@ -1,20 +1,20 @@
 @media screen and (min-width: 1158px) {
-    .container {
+    /* .container {
         max-width: 1158px;
-    }
-    
-    .icon-box {
-        display: none;
-    }
-    
-    .menu-icon,
-    .menu-toggle {
-        display: none;
-    }
+    } */
     
     .nav-list,
     .contacts {
         display: flex;
+    }
+
+    .mobile-menu {
+        display: none !important;
+            
+    }
+    
+    .menu-toggle {
+        display: none !important;     
     }
 }
 
@@ -78,16 +78,12 @@ a {
 .page-header {
     border-bottom: 1px solid #e7e9fc;
     box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 2px 1px 0 rgba(46, 47, 66, 0.08);
-    max-width: 1440px;
-    padding-left: 156px;
-    padding-right: 156px;
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 72px;
 }
 
 .header-nav {
@@ -166,7 +162,7 @@ a {
     .hero-section {
         background-image: linear-gradient(rgba(46, 47, 66, 0.7),
                 rgba(46, 47, 66, 0.7)),
-            url('../images/hero-bg-Main-Page-2x-min.png');
+            url('../images/hero-bg-Main-Page-2x-min.jpg');
     } 
 }
 
