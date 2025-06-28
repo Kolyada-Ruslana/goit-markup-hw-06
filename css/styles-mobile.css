@@ -95,7 +95,7 @@ button {
 
 .menu-icon {
     fill: #2e2f42;
-} */
+}
 
 /* Загальне сховане меню */
 .is-hidden {
@@ -111,17 +111,28 @@ button {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     max-width: none;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     z-index: 1000;
     box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    padding-top: 72px;
+    padding-bottom: 40px;
 }
+
+.mobile-menu.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
 
 /* Кнопка закриття */
 .menu-close {
@@ -133,17 +144,24 @@ button {
     cursor: pointer;
 }
 
+.mobile-nav {
+    margin-bottom: auto;
+}
+
+.mobile-menu-container{
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+}
+
 /* Навігація */
 .mobile-nav-list {
     list-style: none;
     padding: 0;
-    margin: 72px 0 168px 0;
-    margin-left: 16px;
     display: flex;
     flex-direction: column;
     gap: 40px;
-    width: 151px;
-    height: 200px;
 }
 
 .mobile-nav-list a {
@@ -169,7 +187,6 @@ button {
     font-size: 20px;
     text-decoration: none;
     color: #434455;
-    margin-left: 16px;
 }
 
 .mobile-contacts a:first-child {
@@ -197,7 +214,6 @@ button {
     justify-content: center;
     color: #ffffff;
     transition: background-color 0.3s ease;
-    margin: 0 0 40px 0;
 }
 
 .mobile-socials a:hover {
@@ -221,15 +237,12 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* width: 100%; */
 }
 
 
 .header-nav {
     display: flex;
     justify-content: space-between;
-    width: 100%;
-    /* margin: 16px 0; */
 }
 
 
@@ -275,7 +288,6 @@ button {
 }
 
 .hero-section {
-    height: 432px;
     background-image: linear-gradient(rgba(46, 47, 66, 0.7),
             rgba(46, 47, 66, 0.7)),
         url("../images/hero-bg-Mobile-1x-min.jpg");
@@ -288,6 +300,7 @@ button {
     align-items: center;
     justify-content: center;
     gap: 72px;
+    padding: 72px 0;
 }
 
 @media (max-width: 767px) and (min-resolution: 192dpi) {
@@ -304,7 +317,8 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #ffffff;
-    max-width: 496px;
+    max-width: 216px;
+
 }
 
 .hero-button {
@@ -332,14 +346,9 @@ button {
 
 .features-section {
     width: 100%;
-    margin: 96px auto;
-    padding: 0 16px;
+    padding: 96px 0;
 }
 
-.feature-item {
-    width: 288px;
-    height: 120px;
-}
 
 .visually-hidden {
     position: absolute;
@@ -359,7 +368,6 @@ button {
     flex-direction: column;
     gap: 72px;
     align-items: center;
-    height: 696px;
 }
 
 .feature-title {
@@ -370,6 +378,7 @@ button {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
+    margin-bottom: 8px;
 }
 
 .feature-text {
@@ -382,7 +391,7 @@ button {
 
 .team-section {
     background-color: #f4f4fd;
-    padding: 96px 28px;
+    padding: 96px 0;
 }
 
 .team-title {
@@ -413,12 +422,8 @@ button {
 .team-item {
     text-align: center;
     border-radius: 0 0 4px 4px;
-    padding: 0px 0px 32px 0px;
-    width: 264px;
-    height: 428px;
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     background: #fff;
-    padding-bottom: 32px;
 }
 
 .team-img {
@@ -481,14 +486,12 @@ button {
 
 .portfolio-section {
     background-color: #ffffff;
+    padding: 96px 0;
 }
 
-.container-portfolio-title {
-    padding: 96px 16px;
-}
 
 .portfolio-title {
-    font-size: 28px;
+    font-size: 36px;
     font-weight: 700;
     text-align: center;
     margin-bottom: 72px;
@@ -565,26 +568,28 @@ button {
     color: #434455;
 }
 
+.footer-top {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+}
+
 .footer-logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
     line-height: 1.17;
     letter-spacing: 0.03em;
-    margin-bottom: 16px;
     text-transform: uppercase;
     color: #4d5ae5;
     display: inline-block;
-    margin-top: 96px;
 }
 
 
 .page-footer {
     background: #2e2f42;
-    /* padding: 100px 0; */
+    padding: 96px 0;
     color: #fff;
-    width: 100%;
-
 }
 
 .footer .footer-paragraph {
@@ -721,8 +726,6 @@ button {
     display: flex;
     flex-direction: column;
     gap: 16px;
-    width: 100%;
-    margin-bottom: 96px
 }
 
 .subscribe-label {
